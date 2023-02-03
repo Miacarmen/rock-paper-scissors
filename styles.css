@@ -1,13 +1,28 @@
 body {
-    background: #000;
-    color: #fff;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    margin: 0;
-    padding: 0;
+  background: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(0, -50%);
+    padding: 10px;
+}
+
+h1 {
+  color: #478778;
+  text-shadow: 1px 1px 2px #008080;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 prompt {
-    background-color: blue;
+  background-color: blue;
 }
