@@ -2,24 +2,23 @@
 
 # Unit 03 Mini-Project: Rock, Paper, Scissors
 
-In this activity, you will work with a pair to build a game using only JavaScript.
-
 ## Instructions
 
-The completed application should meet the following criteria:
+* Use the `alert()` and `prompt()` methods to collect user input and display information to the user.
 
 * As a user, I want to play Rock, Paper, Scissors against an automated opponent.
+
+* The computer's selection is random to ensure a fair game.
 
 * As a user, I can enter R, P, or S to signify my choice of rock, paper, or scissors.
 
 * As a user, I expect the computer to choose R, P, or S in return.
 
-* As a user, I want the option to play again whether I win or lose.
-
 * As a user, I want to see my total wins, ties, and losses after each round.
 
-### Specifications
+* As a user, I want the option to play again whether I win or lose.
 
-* Must use the `alert()`, `confirm()`, and `prompt()` methods to collect user input and display information to the user.
-
-* The computer's selection must be random to ensure a fair game.
+## Tools
+* HTML
+* CSS
+* Javascript
