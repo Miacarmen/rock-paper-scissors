@@ -17,19 +17,6 @@
 
 A simple game of Rock Paper Scissors. Just you vs the computer.
 
-* Use the `alert()` and `prompt()` methods to collect user input and display information to the user.
-
-* As a user, I want to play Rock, Paper, Scissors against an automated opponent.
-
-* The computer's selection is random to ensure a fair game.
-
-* As a user, I can enter R, P, or S to signify my choice of rock, paper, or scissors.
-
-* As a user, I expect the computer to choose R, P, or S in return.
-
-* As a user, I want to see my total wins, ties, and losses after each round.
-
-* As a user, I want the option to play again whether I win or lose.
 
 ## Tools
 ![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
@@ -46,8 +33,19 @@ A simple game of Rock Paper Scissors. Just you vs the computer.
 
 ## Usage
 
-Follow the prompts to play the game.
-Must type 'Rock', 'Paper', or 'Scissors' in the first prompt, no other enteries will be excepted if typed. 
+* Use the `alert()` and `prompt()` methods to collect user input and display information to the user.
+
+* As a user, I want to play Rock, Paper, Scissors against an automated opponent.
+
+* The computer's selection is random to ensure a fair game.
+
+* As a user, I can enter Rock, Paper, or Scissors as my choice. Must type 'Rock', 'Paper', or 'Scissors', no other enteries will be excepted if typed. 
+
+* As a user, I expect the computer to choose Rock, Paper, or Scissors in return.
+
+* As a user, I want to see my total wins, ties, and losses after each round.
+
+* As a user, I want the option to play again whether I win or lose.
 
 ### Credits
 
