@@ -14,7 +14,15 @@
 
 <body>
     <div class="container">
-        <h1>Rock Paper Scissors</h1>
+        <!-- <h1>Rock Paper Scissors</h1> -->
+
+        <form>
+            <label for="user-choice">Enter R for Rock, P for Paper, S for Scissors: </label>
+            <input type="text" id="user-choice" />
+            <input type="button" value="Play" onclick="playRPS()" />
+          </form>
+          <div id="result"></div>
+          
     </div>
 </body>
 <script src="./main.js"></script>
