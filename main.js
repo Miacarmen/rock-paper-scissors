@@ -1,30 +1,30 @@
+// Global variables
+// create array of choices
+let options = ['Rock', 'Paper', 'Scissors'];
+
+// Users wins, losses, and ties, initialized to 0
+let wins = 0;
+let losses = 0;
+let ties = 0;
+
 let playGame = () => {
-  // create array of choices
-  let options = ['Rock', 'Paper', 'Scissors'];
-
-  // Users wins, losses, and ties, initialized to 0
-  let wins = 0;
-  let losses = 0;
-  let ties = 0;
-
-  // get user's choice
-  let userChoice = setTimeout(() => {
-    prompt('Enter Rock, Paper, or Scissors');
+  // set timeout to delay game start to allow user to read title
+  setTimeout(() => {
+    // get user's choice
+    let userChoice = prompt('Enter Rock, Paper, or Scissors');
+    console.log(userChoice);
     // get randomized computer's choice
     let computerChoice = options[Math.floor(Math.random() * options.length)];
 
     // compare user's choice to computer's choice
 
-    // if userChoice is invalid
-    if (
-      userChoice !== 'Rock' &&
-      userChoice !== 'Paper' &&
-      userChoice !== 'Scissors'
-    ) {
-      alert('Invalid choice! Please try again.');
-    }
     // if userChoice is rock
-    if (userChoice === 'Rock') {
+    if (
+      userChoice === 'Rock' ||
+      userChoice === 'rock' ||
+      userChoice === 'R' ||
+      userChoice === 'r'
+    ) {
       if (computerChoice === 'Rock') {
         ties++;
         alert('The computer chose ' + computerChoice + '. You tied!');
@@ -37,7 +37,12 @@ let playGame = () => {
       }
     }
     // if userChoice is paper
-    if (userChoice === 'Paper') {
+    if (
+      userChoice === 'Paper' ||
+      userChoice === 'paper' ||
+      userChoice === 'P' ||
+      userChoice === 'p'
+    ) {
       if (computerChoice === 'Rock') {
         wins++;
         alert('The computer chose ' + computerChoice + '. You won!');
@@ -50,7 +55,12 @@ let playGame = () => {
       }
     }
     // if userChoice is scissors
-    if (userChoice === 'Scissors') {
+    if (
+      userChoice === 'Scissors' ||
+      userChoice === 'scissors' ||
+      userChoice === 'S' ||
+      userChoice === 's'
+    ) {
       if (computerChoice === 'Rock') {
         losses++;
         alert('The computer chose ' + computerChoice + '. You lost!');
@@ -62,6 +72,25 @@ let playGame = () => {
         alert('The computer chose ' + computerChoice + '. You tied!');
       }
     }
+
+    // if userChoice is invalid
+    // if (
+    //   userChoice !== 'Rock' ||
+    //   userChoice !== 'rock' ||
+    //   userChoice !== 'R' ||
+    //   userChoice !== 'r' ||
+    //   userChoice !== 'Paper' ||
+    //   userChoice !== 'paper' ||
+    //   userChoice !== 'P' ||
+    //   userChoice !== 'p' ||
+    //   userChoice !== 'Scissors' ||
+    //   userChoice !== 'scissors' ||
+    //   userChoice !== 'S' ||
+    //   userChoice !== 's'
+    // ) {
+    //   alert('Invalid choice! Please try again.');
+    // }
+
     // display wins, losses, and ties
     alert('Wins: ' + wins + ' Losses: ' + losses + ' Ties: ' + ties);
 
