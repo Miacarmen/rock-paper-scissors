@@ -147,33 +147,60 @@
 
 // playRPS();
 
+
+// Gloabl variables
+// array of user choices
 const choices = ['R', 'P', 'S'];
 let wins = 0;
 let losses = 0;
 let ties = 0;
 
-//
+// function to get randomized computer choice
 function getComputerChoice() {
-  const choices = ['R', 'P', 'S'];
   return choices[Math.floor(Math.random() * choices.length)];
 }
 
+// function to compaire user choice to computer choice
 function getResult(userChoice, computerChoice) {
-  if (userChoice === computerChoice) return 'Tie';
-  if (userChoice === 'R' && computerChoice === 'S') return 'You Win';
-  if (userChoice === 'P' && computerChoice === 'R') return 'You Win';
-  if (userChoice === 'S' && computerChoice === 'P') return 'You Win';
+  if (userChoice === computerChoice) {
+    ties++;
+    return 'Tie';
+  }
+  if (userChoice === 'R' && computerChoice === 'S') {
+    wins++;
+    return 'You Win';
+  }
+  if (userChoice === 'P' && computerChoice === 'R') {
+    wins++;
+    return 'You Win';
+  }
+  if (userChoice === 'S' && computerChoice === 'P') {
+    wins++;
+    return 'You Win';
+  }
+  losses++;
   return 'You Lose';
 }
 
+// function to play game and display results on screen
 function playRPS() {
+  // variable to store user choice input value
   const userChoice = document.getElementById('user-choice').value;
+  // validator to check if user input is one of the choices
+  if (userChoice !== "R" && userChoice !== "P" && userChoice !== "S") {
+    alert("Not a valid choice, please try again");
+    return;
+  }
+  // variable to store result of invoking getComputerChoice function
   const computerChoice = getComputerChoice();
+  // variable to store result of invoking getResult function
   const result = getResult(userChoice, computerChoice);
 
+  // display results on screen
   document.getElementById('result').style.display = 'block';
   document.getElementById('result').innerHTML = `
+  Result: ${result}!<br>
     You chose ${userChoice}, computer chose ${computerChoice}.<br>
-    Result: ${result}.
+    Wins: ${wins}, Losses: ${losses}, Ties: ${ties}
   `;
 }
